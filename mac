@@ -115,6 +115,7 @@ tap "thoughtbot/formulae"
 tap "homebrew/services"
 
 # Unix
+brew "carthage"
 brew "ctags"
 brew "git"
 brew "openssl"
