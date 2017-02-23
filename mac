@@ -116,6 +116,7 @@ tap "homebrew/services"
 
 # Unix
 brew "carthage"
+brew "cloc"
 brew "ctags"
 brew "git"
 brew "gibo"
