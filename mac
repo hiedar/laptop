@@ -113,6 +113,7 @@ brew update
 brew bundle --file=- <<EOF
 tap "thoughtbot/formulae"
 tap "homebrew/services"
+tap "mono0926/license-plist"
 
 # Unix
 brew "carthage"
@@ -139,6 +140,15 @@ brew "libyaml" # should come after openssl
 brew "rbenv"
 brew "ruby-build"
 
+# Utility
+brew "cloc"
+brew "editorconfig"
+brew "gibo"
+brew "jq"
+brew "license-plist"
+brew "swiftlint"
+brew "tree"
+
 EOF
 
 fancy_echo "Configuring Ruby ..."
@@ -157,7 +167,7 @@ fi
 
 rbenv global "$ruby_version"
 rbenv shell "$ruby_version"
-gem update --system
+sudo gem update --system
 gem_install_or_update 'bundler'
 number_of_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_of_cores - 1))
